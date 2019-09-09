@@ -2,11 +2,11 @@ import React from "react";
 import NewPostForm from "./NewPostForm";
 import PostList from "./PostList";
 
-function Feed() {
+function Feed(props) {
   return (
     <div>
       <NewPostForm />
-      <PostList />
+      <PostList postList={props.postList}/>
     </div>
   );
 }

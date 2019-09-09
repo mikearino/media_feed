@@ -1,7 +1,7 @@
 import React from "react";
 import Feed from "./components/Feed";
 
-class App extends React.component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,6 +10,13 @@ class App extends React.component {
   }
 
   render() {
-    return <Feed />;
+    return(
+      <div>
+        <h1>App is Working</h1>
+        <Feed postList={this.state.postList} />
+      </div>
+    )
   }
 }
+
+export default App
