@@ -1,4 +1,5 @@
 import React from 'react';
+import Likes from './Likes'
 
 function Post (props){
   // Post recieves a piece of the postList array
@@ -7,8 +8,7 @@ function Post (props){
       {/* we access the information in the object literal posts with props.post */}
       <h2>{props.post.name}</h2>
       <p>{props.post.content}</p>
-      <h3>Likes: {props.post.likes}</h3>
-      <button>Like</button>
+      <Likes likes={props.post.likes}/>
     </div>
   )
 

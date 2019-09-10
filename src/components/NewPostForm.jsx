@@ -16,6 +16,7 @@ class NewPostForm extends Component {
 
   handleSubmit(event){
     console.log("submitted")
+    console.log("this is the state in handleSubmit", this.state)
 
     // this finds the thing with name="name" in the submit event
     let name = event.target.name.value
@@ -47,7 +48,10 @@ class NewPostForm extends Component {
 
 
     return(
+
       <div>
+        {/* these inputs have an onChange property that triggers a handle change function  */ }
+        {/* that function basically updates the state of the post, so that there is a current post stored in its state */ }
         <form onSubmit={this.handleSubmit}>
           <label>Name</label>
           <input   name="name" value = {this.state.post.name} onChange = {this.handleChange}/>
