@@ -7,7 +7,7 @@ function Feed(props) {
   return (
     <div>
       {/*feed contains a New Post Form*/}
-      <NewPostForm />
+      <NewPostForm onPostListChange={props.onPostListChange}/>
       {/*Since the master list of posts was passed down from the App into feed, it's available here as props.postList*/}
       <PostList postList={props.postList}/>
     </div>
